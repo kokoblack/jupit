@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import aboutimage from "../assets/about-img.png";
+import downloadimg from "../assets/download-img.png";
 
 export const color = {
   primary: "#1C1D93",
@@ -75,6 +76,7 @@ export const Button = styled.button`
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  border: 1px solid ${color.secondary};
 
   @media (max-width: ${({ hero }) => (hero ? 462 : null)}px) {
     padding: 12px 40px;
@@ -745,12 +747,12 @@ export const AboutTextSmall = styled(Text)`
   margin-bottom: 3rem;
 
   @media (max-width: 420px) {
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1.3rem;
   }
 
   @media (max-width: 276px) {
-    font-size: .75rem;
+    font-size: 0.75rem;
     line-height: 1.3rem;
   }
 `;
@@ -778,22 +780,265 @@ export const AboutCardTextsmall = styled(Text)`
   color: ${({ color }) => color};
 
   @media (max-width: 420px) {
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1.1rem;
   }
 
   @media (max-width: 276px) {
-    font-size: .75rem;
+    font-size: 0.75rem;
     line-height: 1rem;
   }
 `;
 export const AboutCardImg = styled.img`
-height: 5rem;
-width: 5.5rem;
+  height: 5rem;
+  width: 5.5rem;
 `;
 export const AboutImg = styled.img`
-height: .5625rem;
-width: 2.4rem;
-margin-top: 3rem;
-margin-bottom: 1rem;
+  height: 0.5625rem;
+  width: 2.4rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+`;
+
+// download container
+export const DownloadContainer = styled(Flex)`
+  flex-direction: column;
+  padding: 0 6% 4% 6%;
+`;
+export const DownloadLinkContainer = styled(Flex)`
+  flex-wrap: wrap;
+  column-gap: 6rem;
+
+  @media (max-width: 949px) {
+    column-gap: 5%;
+  }
+
+  @media (max-width: 670px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 550px) {
+    padding: 0 3% 4% 3%;
+  }
+`;
+export const DownloadFlex = styled(Flex)`
+  width: 23rem;
+  gap: 1rem;
+  justify-content: flex-start;
+
+  @media (max-width: 949px) {
+    width: 40%;
+  }
+
+  @media (max-width: 670px) {
+    width: 60%;
+  }
+
+  @media (max-width: 550px) {
+    width: 80%;
+  }
+
+  @media (max-width: 420px) {
+    width: 90%;
+  }
+`;
+export const DownloadBigText = styled(HeaderText)`
+  font-size: 3rem;
+  line-height: 4rem;
+  color: ${color.blue1};
+
+  @media (max-width: 949px) {
+    font-size: 2.5rem;
+  line-height: 3rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 2rem;
+  line-height: 2.5rem;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 1.5rem;
+  line-height: 2rem;
+  }
+`;
+export const DownloadSmallText = styled(Text)`
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: ${color.grey};
+
+  @media (max-width: 949px) {
+    font-size: 1.2rem;
+  line-height: 1.7rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: .95rem;
+  line-height: 1.5rem;
+  }
+
+  @media (max-width: 420px) {
+    font-size: .75rem;
+  line-height: 1.2rem;
+  }
+`;
+export const DownloadLinkText = styled(SubText)`
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: ${color.blue1};
+  text-align: left;
+
+  @media (max-width: 949px) {
+    font-size: .9rem;
+  line-height: 1.2rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: .75rem;
+  line-height: 1.1rem;
+  }
+
+  @media (max-width: 420px) {
+    font-size: .7rem;
+  line-height: 1.1rem;
+  }
+`;
+export const DownloadFooterText = styled(SubText)`
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+
+  @media (max-width: 949px) {
+    font-size: 1.7rem;
+  line-height: 2.2rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 1.3rem;
+  line-height: 2rem;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 1rem;
+  line-height: 1.5rem;
+  }
+
+  @media (max-width: 420px) {
+    font-size: .9rem;
+  line-height: 1.4rem;
+  }
+
+  @media (max-width: 340px) {
+    font-size: .75rem;
+  line-height: 1.2rem;
+  }
+`;
+export const DownloadButton = styled(Button)`
+  padding: 0.8rem 1.5rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  @media (max-width: 800px) {
+    font-size: .8rem;
+  line-height: 1.2rem;
+  padding: 0.7rem 1.3rem;
+  }
+
+  @media (max-width: 550px) {
+    font-size: .6rem;
+  line-height: 1rem;
+  padding: 0.4rem .9rem;
+  }
+`;
+export const DownloadFooterContainer = styled(Flex)`
+  flex-direction: column;
+  position: relative;
+  background-image: url(${downloadimg});
+  background-color: ${color.primary};
+  background-size: cover;
+  padding: 4% 12%;
+  margin-top: 6%;
+`;
+export const Bitcoin = styled(Image)`
+  position: absolute;
+  height: 6.375rem;
+  width: 6.375rem;
+  top: -20%;
+  right: 5%;
+
+  @media (max-width: 950px) {
+    height: 4rem;
+  width: 4rem;
+  top: -15%;
+  }
+
+  @media (max-width: 550px) {
+    width: 3rem;
+  height: 3rem;
+  }
+
+  @media (max-width: 340px) {
+    width: 2.5rem;
+  height: 2.5rem;
+  }
+`;
+export const Naira = styled(Image)`
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  top: 10%;
+  right: -3.5%;
+
+  @media (max-width: 950px) {
+    height: 3.5rem;
+  width: 3.5rem;
+  }
+
+  @media (max-width: 550px) {
+    width: 2.5rem;
+  height: 2.5rem;
+  }
+
+  @media (max-width: 340px) {
+    width: 2rem;
+  height: 2rem;
+  }
+`;
+export const Eth = styled(Image)`
+  position: absolute;
+  bottom: -10%;
+  left: 5%;
+  height: 5rem;
+  width: 5rem;
+
+  @media (max-width: 950px) {
+    height: 3.5rem;
+  width: 3.5rem;
+  }
+
+  @media (max-width: 550px) {
+    width: 2.5rem;
+  height: 2.5rem;
+  }
+  
+  @media (max-width: 340px) {
+    width: 2rem;
+  height: 2rem;
+  }
+`;
+export const DownloadImg = styled(Image)`
+  height: 45.25rem;
+  width: 45.25rem;
+
+  @media (max-width: 850px) {
+    width: 100%;
+  height: auto;
+  }
+  
 `;
