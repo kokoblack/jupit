@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import aboutimage from "../assets/about-img.png";
 import downloadimg from "../assets/download-img.png";
+import footerimg from "../assets/footer-img.png";
 
 export const color = {
   primary: "#1C1D93",
@@ -19,10 +20,18 @@ export const color = {
 // predefined styled
 export const MoveLeft = styled.div`
   margin-right: auto;
+
+  @media (max-width: 950px) {
+  margin-right: ${({footer}) => footer? 0: 'auto'};
+}
 `;
 
 export const MoveRight = styled.div`
   margin-left: auto;
+
+  @media (max-width: 950px) {
+  margin-left: ${({footer}) => footer? 0: 'auto'};
+}
 `;
 
 export const Logo = styled.img`
@@ -803,7 +812,7 @@ export const AboutImg = styled.img`
 // download container
 export const DownloadContainer = styled(Flex)`
   flex-direction: column;
-  padding: 0 6% 4% 6%;
+  padding: 0 5% 4% 5%;
 `;
 export const DownloadLinkContainer = styled(Flex)`
   flex-wrap: wrap;
@@ -849,17 +858,17 @@ export const DownloadBigText = styled(HeaderText)`
 
   @media (max-width: 949px) {
     font-size: 2.5rem;
-  line-height: 3rem;
+    line-height: 3rem;
   }
 
   @media (max-width: 800px) {
     font-size: 2rem;
-  line-height: 2.5rem;
+    line-height: 2.5rem;
   }
 
   @media (max-width: 420px) {
     font-size: 1.5rem;
-  line-height: 2rem;
+    line-height: 2rem;
   }
 `;
 export const DownloadSmallText = styled(Text)`
@@ -870,17 +879,17 @@ export const DownloadSmallText = styled(Text)`
 
   @media (max-width: 949px) {
     font-size: 1.2rem;
-  line-height: 1.7rem;
+    line-height: 1.7rem;
   }
 
   @media (max-width: 800px) {
-    font-size: .95rem;
-  line-height: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
   }
 
   @media (max-width: 420px) {
-    font-size: .75rem;
-  line-height: 1.2rem;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
   }
 `;
 export const DownloadLinkText = styled(SubText)`
@@ -891,18 +900,18 @@ export const DownloadLinkText = styled(SubText)`
   text-align: left;
 
   @media (max-width: 949px) {
-    font-size: .9rem;
-  line-height: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
   }
 
   @media (max-width: 800px) {
-    font-size: .75rem;
-  line-height: 1.1rem;
+    font-size: 0.75rem;
+    line-height: 1.1rem;
   }
 
   @media (max-width: 420px) {
-    font-size: .7rem;
-  line-height: 1.1rem;
+    font-size: 0.7rem;
+    line-height: 1.1rem;
   }
 `;
 export const DownloadFooterText = styled(SubText)`
@@ -914,27 +923,27 @@ export const DownloadFooterText = styled(SubText)`
 
   @media (max-width: 949px) {
     font-size: 1.7rem;
-  line-height: 2.2rem;
+    line-height: 2.2rem;
   }
 
   @media (max-width: 800px) {
     font-size: 1.3rem;
-  line-height: 2rem;
+    line-height: 2rem;
   }
 
   @media (max-width: 550px) {
     font-size: 1rem;
-  line-height: 1.5rem;
+    line-height: 1.5rem;
   }
 
   @media (max-width: 420px) {
-    font-size: .9rem;
-  line-height: 1.4rem;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
   }
 
   @media (max-width: 340px) {
-    font-size: .75rem;
-  line-height: 1.2rem;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
   }
 `;
 export const DownloadButton = styled(Button)`
@@ -945,15 +954,15 @@ export const DownloadButton = styled(Button)`
   line-height: 1.5rem;
 
   @media (max-width: 800px) {
-    font-size: .8rem;
-  line-height: 1.2rem;
-  padding: 0.7rem 1.3rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    padding: 0.7rem 1.3rem;
   }
 
   @media (max-width: 550px) {
-    font-size: .6rem;
-  line-height: 1rem;
-  padding: 0.4rem .9rem;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    padding: 0.4rem 0.9rem;
   }
 `;
 export const DownloadFooterContainer = styled(Flex)`
@@ -962,8 +971,9 @@ export const DownloadFooterContainer = styled(Flex)`
   background-image: url(${downloadimg});
   background-color: ${color.primary};
   background-size: cover;
-  padding: 4% 12%;
+  padding: 4% 10%;
   margin-top: 6%;
+  border-radius: 8px;
 `;
 export const Bitcoin = styled(Image)`
   position: absolute;
@@ -974,18 +984,18 @@ export const Bitcoin = styled(Image)`
 
   @media (max-width: 950px) {
     height: 4rem;
-  width: 4rem;
-  top: -15%;
+    width: 4rem;
+    top: -15%;
   }
 
   @media (max-width: 550px) {
     width: 3rem;
-  height: 3rem;
+    height: 3rem;
   }
 
   @media (max-width: 340px) {
     width: 2.5rem;
-  height: 2.5rem;
+    height: 2.5rem;
   }
 `;
 export const Naira = styled(Image)`
@@ -997,17 +1007,17 @@ export const Naira = styled(Image)`
 
   @media (max-width: 950px) {
     height: 3.5rem;
-  width: 3.5rem;
+    width: 3.5rem;
   }
 
   @media (max-width: 550px) {
     width: 2.5rem;
-  height: 2.5rem;
+    height: 2.5rem;
   }
 
   @media (max-width: 340px) {
     width: 2rem;
-  height: 2rem;
+    height: 2rem;
   }
 `;
 export const Eth = styled(Image)`
@@ -1019,17 +1029,17 @@ export const Eth = styled(Image)`
 
   @media (max-width: 950px) {
     height: 3.5rem;
-  width: 3.5rem;
+    width: 3.5rem;
   }
 
   @media (max-width: 550px) {
     width: 2.5rem;
-  height: 2.5rem;
+    height: 2.5rem;
   }
-  
+
   @media (max-width: 340px) {
     width: 2rem;
-  height: 2rem;
+    height: 2rem;
   }
 `;
 export const DownloadImg = styled(Image)`
@@ -1038,7 +1048,119 @@ export const DownloadImg = styled(Image)`
 
   @media (max-width: 850px) {
     width: 100%;
-  height: auto;
+    height: auto;
   }
-  
 `;
+
+// footer section
+
+export const FooterConataier = styled(Flex)`
+  background-image: url(${footerimg});
+  background-color: ${color.primary};
+  background-size: cover;
+  flex-direction: column;
+  padding: 4% 5%;
+  margin-top: 2rem;
+`;
+export const FooterContentHolder = styled.div`
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+column-gap: 2rem;
+
+@media (max-width: 950px) {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: .5rem;
+}
+
+@media (max-width: 550px) {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 210px) {
+  grid-template-columns: 1fr;
+}
+`;
+export const FooterContent = styled(Flex)`
+  text-align: left;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+export const FooterBottomContent = styled(Flex)`
+width: 100%;
+
+@media (max-width: 950px) {
+    flex-direction: column;
+  }
+`;
+export const FooterBottomContentFlex = styled(Flex)`
+gap: 1rem;
+
+@media (max-width: 950px) {
+  margin: 1rem 0;
+  flex-wrap: wrap;
+
+  }
+`;
+export const FooterHeader = styled(SubText)`
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #ffffff;
+  margin-bottom: 0;
+  text-align: left;
+
+  @media (max-width: 420px) {
+    font-size: .8rem;
+  line-height: 1.7rem;
+  }
+`;
+export const FooterText = styled(Text)`
+  font-family: "Poppins";
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #ffffff;
+  margin-bottom: 0;
+  text-align: left;
+
+  @media (max-width: 420px) {
+    font-size: .8rem;
+  line-height: 1.7rem;
+  }
+`;
+export const FooterBottomText = styled(Text)`
+  font-family: "Poppins";
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 0;
+
+  @media (max-width: 420px) {
+    font-size: .8rem;
+  line-height: 1rem;
+  }
+`;
+export const FooterIcon = styled.div`
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: .8rem .8rem .4rem .8rem;
+  font-size: 20px;
+  border-radius: 100%;
+  margin: .5rem;
+
+  @media (max-width: 420px) {
+    padding: .6rem .6rem .3rem .6rem;
+  font-size: 15px;
+  }
+`;
+export const FooterImage = styled(Image)`
+  width: 6.5rem;
+  height: 2rem;
+  color: #fff;
+`;
+export const HR = styled.div`
+border: .5px solid #fff;
+width: 100%;
+margin: 2rem 0 1.5rem 0;
+`
