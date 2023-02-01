@@ -22,16 +22,16 @@ export const MoveLeft = styled.div`
   margin-right: auto;
 
   @media (max-width: 950px) {
-  margin-right: ${({footer}) => footer? 0: 'auto'};
-}
+    margin-right: ${({ footer }) => (footer ? 0 : "auto")};
+  }
 `;
 
 export const MoveRight = styled.div`
   margin-left: auto;
 
   @media (max-width: 950px) {
-  margin-left: ${({footer}) => footer? 0: 'auto'};
-}
+    margin-left: ${({ footer }) => (footer ? 0 : "auto")};
+  }
 `;
 
 export const Logo = styled.img`
@@ -481,14 +481,14 @@ export const Circle = styled.div`
 
 export const CardImage = styled(Image)`
   @media (max-width: 335px) {
-    height: ${({ height }) => height - 1}rem;
-    width: ${({ width }) => width - 1.65}rem;
+    height: ${({ height }) => height - 0.5}rem;
+    width: ${({ width }) => width - 0.5}rem;
   }
+`;
 
-  @media (max-width: 270px) {
-    height: ${({ height }) => height - 1.5}rem;
-    width: ${({ width }) => width - 2}rem;
-  }
+export const CardFlexibleWrapper = styled(FlexibleWrapper)`
+  bottom: 0%;
+  left: 0.2%;
 `;
 // Features
 export const Feat = styled(Flex)`
@@ -496,7 +496,7 @@ export const Feat = styled(Flex)`
   flex-direction: column;
   position: relative;
 
-  @media (max-width: 470px) {
+  @media (max-width: 599px) {
     padding: 10%;
   }
 `;
@@ -609,9 +609,9 @@ export const Feature1TextBig = styled(HeaderText)`
     line-height: ${({ height }) => height - 0.7}rem;
   }
 
-  @media (max-width: 280px) {
+  /* @media (max-width: 280px) {
     text-align: center;
-  }
+  } */
 `;
 export const Feature1TextMid = styled(SubText)`
   color: ${color.blue2};
@@ -637,16 +637,17 @@ export const Feature1TextSmall = styled(Text)`
   }
 `;
 export const FeatFlex = styled(Flex)`
-  background: radial-gradient(110% 20% at bottom, transparent 50%, #ededf6 51%);
+  background: radial-gradient(100% 20% at bottom, transparent 50%, #ededf6 51%); 
+  /* background-color: #ededf6; */
   border-radius: 1rem;
-  padding: 2rem 3rem 6rem 3rem;
+  padding: 2rem 3rem 4rem 3rem;
   /* width: 100%; */
   position: relative;
   margin-top: 5rem;
 
-  @media (max-width: 899px) {
+  /* @media (max-width: 899px) {
     padding-bottom: 4rem;
-  }
+  } */
 
   @media (max-width: 599px) {
     padding-bottom: 2rem;
@@ -673,23 +674,34 @@ export const FeatIcon = styled(Icon)`
 `;
 export const FeatImg = styled(Image)`
   position: absolute;
-  bottom: 2rem;
+  bottom: 0;
   right: 2rem;
+  z-index: 5;
 
   @media (max-width: 1020px) {
     height: ${({ height }) => height - 3}rem;
     width: ${({ width }) => width - 4}rem;
-    bottom: 1rem;
   }
 
   @media (max-width: 899px) {
     display: none;
   }
 `;
+export const FeatFlexibleWrapper = styled(FlexibleWrapper)`
+  top: -1%;
+  right: 0.2%;
+
+  @media (max-width: 335px) {
+    top: -.7%;
+  }
+`;
 export const FeatIconImage = styled(Image)`
-  @media (max-width: 1120px) {
-    height: ${({ height }) => height - 2}rem;
-    width: ${({ width }) => width - 1.5}rem;
+  height: 3rem;
+  width: 2rem;
+  
+  @media (max-width: 335px) {
+    height: 2.2rem;
+    width: 1.2rem;
   }
 `;
 
@@ -1063,22 +1075,22 @@ export const FooterConataier = styled(Flex)`
   margin-top: 2rem;
 `;
 export const FooterContentHolder = styled.div`
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-column-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 2rem;
 
-@media (max-width: 950px) {
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: .5rem;
-}
+  @media (max-width: 950px) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5rem;
+  }
 
-@media (max-width: 550px) {
-  grid-template-columns: repeat(2, 1fr);
-}
+  @media (max-width: 550px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-@media (max-width: 210px) {
-  grid-template-columns: 1fr;
-}
+  @media (max-width: 210px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const FooterContent = styled(Flex)`
   text-align: left;
@@ -1087,19 +1099,18 @@ export const FooterContent = styled(Flex)`
   justify-content: flex-start;
 `;
 export const FooterBottomContent = styled(Flex)`
-width: 100%;
+  width: 100%;
 
-@media (max-width: 950px) {
+  @media (max-width: 950px) {
     flex-direction: column;
   }
 `;
 export const FooterBottomContentFlex = styled(Flex)`
-gap: 1rem;
+  gap: 1rem;
 
-@media (max-width: 950px) {
-  margin: 1rem 0;
-  flex-wrap: wrap;
-
+  @media (max-width: 950px) {
+    margin: 1rem 0;
+    flex-wrap: wrap;
   }
 `;
 export const FooterHeader = styled(SubText)`
@@ -1112,8 +1123,8 @@ export const FooterHeader = styled(SubText)`
   text-align: left;
 
   @media (max-width: 420px) {
-    font-size: .8rem;
-  line-height: 1.7rem;
+    font-size: 0.8rem;
+    line-height: 1.7rem;
   }
 `;
 export const FooterText = styled(Text)`
@@ -1125,8 +1136,8 @@ export const FooterText = styled(Text)`
   text-align: left;
 
   @media (max-width: 420px) {
-    font-size: .8rem;
-  line-height: 1.7rem;
+    font-size: 0.8rem;
+    line-height: 1.7rem;
   }
 `;
 export const FooterBottomText = styled(Text)`
@@ -1137,21 +1148,21 @@ export const FooterBottomText = styled(Text)`
   margin-bottom: 0;
 
   @media (max-width: 420px) {
-    font-size: .8rem;
-  line-height: 1rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
   }
 `;
 export const FooterIcon = styled.div`
   border: 1px solid #ffffff;
   color: #ffffff;
-  padding: .8rem .8rem .4rem .8rem;
+  padding: 0.8rem 0.8rem 0.4rem 0.8rem;
   font-size: 20px;
   border-radius: 100%;
-  margin: .5rem;
+  margin: 0.5rem;
 
   @media (max-width: 420px) {
-    padding: .6rem .6rem .3rem .6rem;
-  font-size: 15px;
+    padding: 0.6rem 0.6rem 0.3rem 0.6rem;
+    font-size: 15px;
   }
 `;
 export const FooterImage = styled(Image)`
@@ -1160,7 +1171,7 @@ export const FooterImage = styled(Image)`
   color: #fff;
 `;
 export const HR = styled.div`
-border: .5px solid #fff;
-width: 100%;
-margin: 2rem 0 1.5rem 0;
-`
+  border: 0.5px solid #fff;
+  width: 100%;
+  margin: 2rem 0 1.5rem 0;
+`;

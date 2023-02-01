@@ -4,6 +4,7 @@ import { IoIosFlash } from "react-icons/io";
 import { GiTwoCoins, GiFallingStar } from "react-icons/gi";
 import { BsWallet2, BsCheckCircleFill } from "react-icons/bs";
 import phone from '../../assets/phone2.png'
+import star from '../../assets/star-img1.png'
 import {
   FeatContainer,
   Flex,
@@ -16,12 +17,17 @@ import {
   Feat,
   FeatImg,
   FlexBasis,
+  FeatIconImage,
+  FeatFlexibleWrapper,
 } from "../../components/StyledComponent";
 
 const Features = () => {
   return (
     <div>
       <Feat>
+        <FeatFlexibleWrapper>
+          <FeatIconImage src={star} alt='star'/>
+        </FeatFlexibleWrapper>
         <FeatureTextBig size={3} height={4}>
           Best services that works for you
         </FeatureTextBig>

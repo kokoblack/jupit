@@ -1,7 +1,7 @@
 import React from "react";
-import { CardHolder } from "../../components/StyledComponent";
+import { CardHolder, CardFlexibleWrapper, CardImage } from "../../components/StyledComponent";
 import Card from "../../components/Card";
-// import star from "../../assets/star-img.png"
+import star from "../../assets/star-img.png"
 
 const Cards = () => {
   return (
@@ -11,9 +11,9 @@ const Cards = () => {
         <Card text="Secure Wallet" />
         <Card text="Built for You" />
         <Card text="Customer First" />
-        {/* <FlexibleWrapper >
-          <CardImage src={star} alt="star" width={3.5} height={2.65}/>
-        </FlexibleWrapper> */}
+        <CardFlexibleWrapper >
+          <CardImage src={star} alt="star" width={2} height={2}/>
+        </CardFlexibleWrapper> 
       </CardHolder>
     </div>
   );
