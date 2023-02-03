@@ -128,9 +128,9 @@ export const FlexBasis = styled.div`
     flex-basis: ${({ basis, feat }) => (feat ? basis + 20 : basis - 20)}%;
   }
 
-  @media (max-width: 599px) {
+  /* @media (max-width: 599px) {
     flex-basis: ${({ basis, feat }) => (feat ? (basis = 100) : (basis = 0))}%;
-  }
+  } */
 `;
 
 export const Icon = styled(Flex)`
@@ -265,6 +265,7 @@ export const Menu = styled.div`
 export const Herro = styled(Flex)`
   padding: 0 5rem 0 5rem;
   gap: 4rem;
+  position: relative;
 
   @media (max-width: 1118px) {
     flex-direction: column;
@@ -274,7 +275,132 @@ export const Herro = styled(Flex)`
     padding: 0 1rem 0 1rem;
   }
 `;
+export const HeroCoinHolder = styled(Flex)`
+  flex-direction: column;
+  width: 16.4rem;
+  /* height: 13.8rem; */
+  background-color: #fff;
+  padding: 0.5rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  z-index: 10;
 
+  @media (max-width: 335px) {
+    width: auto;
+  }
+`;
+export const HeroCoinHolder1 = styled(Flex)`
+  border: 2px solid ${({ focus }) => (focus === true ? color.primary : "#A9A9A9")};
+  padding: 0.3rem;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  position: relative;
+  width: 95%;
+`;
+export const HeroCoinOptionButton = styled.button`
+  font-family: "Noto Sans";
+  font-weight: 600;
+  line-height: 1.1rem;
+  font-size: 0.8rem;
+  margin: 8px;
+  color: ${({ active }) => (active === true ? color.primary : "#A9A9A9")};
+  background-color: #fff;
+  border: none;
+
+  @media (max-width: 335px) {
+    font-size: .75rem;
+    margin: 6px;
+  }
+
+  @media (max-width: 260px) {
+    font-size: .7rem;
+  }
+`;
+export const HeroCoinButton = styled(Button)`
+  color: #fff;
+  background-color: ${color.primary};
+  width: 100%;
+  padding: 1rem 0;
+  font-family: "Poppins";
+  border: none;
+  border-radius: 5px;
+
+  @media (max-width: 335px) {
+    font-size: .8rem;
+    padding: .8rem;
+  }
+
+  @media (max-width: 260px) {
+    font-size: .75rem;
+    padding: .75rem;
+  }
+`;
+export const HeroCoinInput = styled.input`
+  font-family: "Noto Sans";
+  font-weight: 600;
+  line-height: 0.9rem;
+  font-size: 0.57rem;
+  color: #626262;
+  border: 1px solid #fff;
+  outline: none;
+`;
+export const HeroCoinsText = styled(Text)`
+  font-family: "Noto Sans";
+  font-weight: ${({ weight }) => (weight ? weight : 600)};
+  line-height: 1.1rem;
+  font-size: 0.8rem;
+  margin: 8px;
+  color: ${({ color }) => (color ? color : "#A9A9A9")};
+
+  @media (max-width: 335px) {
+    font-size: .75rem;
+    margin: 6px;
+  }
+
+  @media (max-width: 260px) {
+    font-size: .7rem;
+  }
+`;
+export const HeroCoinsImage = styled(Image)`
+  width: 1rem;
+  height: 1rem;
+
+  @media (max-width: 335px) {
+    width: .8rem;
+    height: .8rem;
+  }
+
+  @media (max-width: 260px) {
+    width: .6rem;
+    height: .6rem;
+  }
+`;
+export const HeroCoinsIcon = styled.div`
+  font-size: 20px;
+
+  @media (max-width: 335px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 260px) {
+    font-size: 15px;
+  }
+`;
+export const HeroCoinsIconSync = styled.div`
+  font-size: 15px;
+  border-radius: 100%;
+  padding: 0.2rem 0.2rem 0 0.2rem;
+  position: absolute;
+  border: 1px solid #a9a9a9;
+  color: ${color.primary};
+  transform: rotate(90deg);
+  top: 23%;
+  background-color: #fff;
+  z-index: 5;
+`;
+export const HeroCoinsDiverder = styled.div`
+  color: #a9a9a9;
+`;
 export const HeroText = styled(HeaderText)`
   padding-right: 2rem;
 
@@ -340,7 +466,7 @@ export const ManImage = styled(Image)`
   }
 
   @media (max-width: 600px) {
-    display: none;
+    display: none; 
   }
 `;
 
@@ -354,26 +480,64 @@ export const SuccsessImage = styled(Image)`
     display: none;
   }
 `;
-
-export const BuyImage = styled(Image)`
+export const HeroFlexibleWrapper = styled(FlexibleWrapper)`
   @media (max-width: 1250px) {
-    height: ${({ height }) => height - 2}rem;
-    width: ${({ width }) => width - 3}rem;
+    top: ${({ avatar, top }) => (avatar ? top - 3.3 : top - 1.3)}rem;
+    left: ${({ avatar, left }) => (avatar ? left - 2 : left - 2)}rem;
+  }
+`;
+export const CoinContainer = styled(Flex)`
+  flex-direction: column;
+  position: absolute;
+  background-color: #fff;
+  z-index: 15;
+  width: 10rem;
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  border-radius: 8px;
+  right: 0;
+  top: 83%;
+`;
+export const CoinsButton = styled(Button)`
+  font-family: "Noto Sans";
+  font-size: 12px;
+  padding: 0.1rem;
+  border: 1px solid #fff;
+  color: ${color.primary};
+  background-color: #fff;
+
+  &:hover {
+    color: ${color.secondary};
+  }
+`;
+export const HeroCryptoFlexibleWrapper = styled.div`
+  position: absolute;
+  right: 29%;
+  top: 10%;
+  z-index: 12;
+
+  @media (max-width: 1118px) {
+    top: 50%;
+    left: 10%;
+  }
+
+  @media (max-width: 930px) {
+    top: 55%;
+    left: 8%;
+  }
+
+  @media (max-width: 694px) {
+    top: 50%;
+    left: 3%;
   }
 
   @media (max-width: 600px) {
-    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
   }
 `;
 
-export const HeroFlexibleWrapper = styled(FlexibleWrapper)`
-  @media (max-width: 1250px) {
-    top: ${({ avatar, buy, top }) =>
-      avatar ? top - 3.3 : buy ? top - 1.7 : top - 3.3}rem;
-    left: ${({ avatar, buy, left }) =>
-      avatar ? left - 2 : buy ? left + 2 : left - 2}rem;
-  }
-`;
 // card
 export const CardHolder = styled(Flex)`
   justify-content: space-around;
@@ -637,7 +801,7 @@ export const Feature1TextSmall = styled(Text)`
   }
 `;
 export const FeatFlex = styled(Flex)`
-  background: radial-gradient(100% 20% at bottom, transparent 50%, #ededf6 51%); 
+  background: radial-gradient(100% 20% at bottom, transparent 50%, #ededf6 51%);
   /* background-color: #ededf6; */
   border-radius: 1rem;
   padding: 2rem 3rem 4rem 3rem;
@@ -692,13 +856,13 @@ export const FeatFlexibleWrapper = styled(FlexibleWrapper)`
   right: 0.2%;
 
   @media (max-width: 335px) {
-    top: -.7%;
+    top: -0.7%;
   }
 `;
 export const FeatIconImage = styled(Image)`
   height: 3rem;
   width: 2rem;
-  
+
   @media (max-width: 335px) {
     height: 2.2rem;
     width: 1.2rem;
