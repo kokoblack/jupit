@@ -16,7 +16,7 @@ import jupit from "../../assets/jupit.png";
 
 const Navbar = () => {
   const zIndex = {
-    zIndex: 6
+    zIndex: 8
   }
   const [menu, toggleMenu] = useState(false);
   return (

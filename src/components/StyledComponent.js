@@ -128,9 +128,9 @@ export const FlexBasis = styled.div`
     flex-basis: ${({ basis, feat }) => (feat ? basis + 20 : basis - 20)}%;
   }
 
-  /* @media (max-width: 599px) {
+  @media (max-width: 650px) {
     flex-basis: ${({ basis, feat }) => (feat ? (basis = 100) : (basis = 0))}%;
-  } */
+  }
 `;
 
 export const Icon = styled(Flex)`
@@ -249,7 +249,7 @@ export const Menu = styled.div`
   padding: 3rem 0 3rem 0;
   box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   /* box-shadow: 3px 3px 3px whitesmoke, -3px -3px 3px whitesmoke; */
-  z-index: 3;
+  z-index: 6;
 
   @media (max-width: 550px) {
     width: 100%;
@@ -512,9 +512,9 @@ export const CoinsButton = styled(Button)`
 `;
 export const HeroCryptoFlexibleWrapper = styled.div`
   position: absolute;
-  right: 29%;
+  right: 28%;
   top: 10%;
-  z-index: 12;
+  z-index: 5;
 
   @media (max-width: 1118px) {
     top: 50%;
