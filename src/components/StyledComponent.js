@@ -654,6 +654,7 @@ export const CardFlexibleWrapper = styled(FlexibleWrapper)`
   bottom: 0%;
   left: 0.2%;
 `;
+
 // Features
 export const Feat = styled(Flex)`
   padding: 3rem 3rem 0 3rem;
@@ -875,10 +876,10 @@ export const AboutContainer = styled(Flex)`
   background-image: url(${aboutimage});
   background-color: ${color.primary};
   background-size: cover;
-  padding: 3rem;
+  padding: 3rem 3rem 5rem 3rem;
 
   @media (max-width: 420px) {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
   }
 `;
 export const AboutCardContainer = styled(Flex)`

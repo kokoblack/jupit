@@ -3,11 +3,9 @@ import {
   AboutCardContainer,
   AboutContainer,
   AboutTextBig,
-  AboutTextSmall,
-  AboutImg,
+  AboutTextSmall
 } from "../../components/StyledComponent";
 import { AboutCard } from "../../components/AboutCard";
-import indi from "../../assets/indicator.png";
 
 const About = () => {
   return (
@@ -22,7 +20,6 @@ const About = () => {
           <AboutCard />
           <AboutCard />
         </AboutCardContainer>
-        <AboutImg src={indi} alt="loading" />
       </AboutContainer>
     </div>
   );

@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import Axios from "axios";
 import {
   Flex,
@@ -51,14 +51,13 @@ const Hero = () => {
   const [focus, setFocus] = useState(true);
   const [coinMenu, setCoinMenu] = useState(false);
   const [coinMenu1, setCoinMenu1] = useState(false);
-  const [coinName, setCoinName] = useState("Coin");
+  const [coinsData, setCoinsData] = useState([]);
+  const [coinName, setCoinName] = useState("Ethereum");
   const [coinImage, setCoinImage] = useState(bitcoin);
   const [coinSymbol, setCoinSymbol] = useState("BTC");
   const [coinPrice, setCoinPrice] = useState("0");
   const [coinImage1, setCoinImage1] = useState(eth);
   const [coinSymbol1, setCoinSymbol1] = useState("ETH");
-
-  const [coinsData, setCoinsData] = useState([]);
 
   const handleClickOutside = () => {
     setCoinMenu(false);
@@ -74,6 +73,8 @@ const Hero = () => {
   useEffect(() => {
     Axios.get(baseUrl).then((res) => {
       setCoinsData(res.data);
+      setCoinName(res.data[1].name);
+      setCoinPrice(res.data[1].current_price);
     });
   }, []);
 
