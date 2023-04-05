@@ -9,8 +9,8 @@ import {
   NavAnchor,
   Show,
   Menu,
-} from "../../components/StyledComponent";
-import jupit from "../../assets/jupit.png";
+} from "../components/StyledComponent";
+import jupit from "../assets/jupit.png";
 
 
 
@@ -20,7 +20,7 @@ const Navbar = () => {
   }
   const [menu, toggleMenu] = useState(false);
   return (
-    <div>
+    
       <Nav>
         <MoveLeft>
           <Logo height={3.125} width={10} src={jupit} alt="logo" />
@@ -78,7 +78,6 @@ const Navbar = () => {
           </div>
         )}
       </Nav>
-    </div>
   );
 };
 

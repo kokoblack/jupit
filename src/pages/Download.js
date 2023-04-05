@@ -1,8 +1,8 @@
 import React from "react";
-import phone from "../../assets/phone1.png";
-import bitcoin from "../../assets/btc.png";
-import naira from "../../assets/ngr.png";
-import eth from "../../assets/eth.png";
+import phone from "../assets/phone1.png";
+import bitcoin from "../assets/btc.png";
+import naira from "../assets/ngr.png";
+import eth from "../assets/eth.png";
 import { RiArrowRightSFill } from "react-icons/ri";
 import {
   DownloadBigText,
@@ -19,7 +19,7 @@ import {
   DownloadImg,
   DownloadFlex,
   color,
-} from "../../components/StyledComponent";
+} from "../components/StyledComponent";
 
 const Download = () => {
   return (

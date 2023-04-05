@@ -9,7 +9,7 @@ import {
   Icon1,
   Icon2
 } from "./StyledComponent";
-import { BsArrowRightShort, BsArrowLeftRight } from "react-icons/bs";
+import { BsArrowRightShort } from "react-icons/bs";
 import {RiArrowLeftRightLine} from "react-icons/ri"
 
 export const size = 30
