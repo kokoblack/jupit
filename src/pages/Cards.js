@@ -1,7 +1,7 @@
 import React from "react";
-import { CardHolder, CardFlexibleWrapper, CardImage } from "../../components/StyledComponent";
-import Card from "../../components/Card";
-import star from "../../assets/star-img.png"
+import { CardHolder, CardFlexibleWrapper, CardImage } from "../components/StyledComponent";
+import Card from "../components/Card";
+import star from "../assets/star-img.png"
 
 const Cards = () => {
   return (

@@ -34,6 +34,13 @@ export const MoveRight = styled.div`
   }
 `;
 
+export const Sticky = styled.div`
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+`;
+
 export const Logo = styled.img`
   height: ${({ height }) => height}rem;
   width: ${({ width }) => width}rem;
@@ -290,7 +297,8 @@ export const HeroCoinHolder = styled(Flex)`
   }
 `;
 export const HeroCoinHolder1 = styled(Flex)`
-  border: 2px solid ${({ focus }) => (focus === true ? color.primary : "#A9A9A9")};
+  border: 2px solid
+    ${({ focus }) => (focus === true ? color.primary : "#A9A9A9")};
   padding: 0.3rem;
   margin-bottom: 5px;
   border-radius: 5px;
@@ -308,12 +316,12 @@ export const HeroCoinOptionButton = styled.button`
   border: none;
 
   @media (max-width: 335px) {
-    font-size: .75rem;
+    font-size: 0.75rem;
     margin: 6px;
   }
 
   @media (max-width: 260px) {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 `;
 export const HeroCoinButton = styled(Button)`
@@ -326,13 +334,13 @@ export const HeroCoinButton = styled(Button)`
   border-radius: 5px;
 
   @media (max-width: 335px) {
-    font-size: .8rem;
-    padding: .8rem;
+    font-size: 0.8rem;
+    padding: 0.8rem;
   }
 
   @media (max-width: 260px) {
-    font-size: .75rem;
-    padding: .75rem;
+    font-size: 0.75rem;
+    padding: 0.75rem;
   }
 `;
 export const HeroCoinInput = styled.input`
@@ -353,12 +361,12 @@ export const HeroCoinsText = styled(Text)`
   color: ${({ color }) => (color ? color : "#A9A9A9")};
 
   @media (max-width: 335px) {
-    font-size: .75rem;
+    font-size: 0.75rem;
     margin: 6px;
   }
 
   @media (max-width: 260px) {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 `;
 export const HeroCoinsImage = styled(Image)`
@@ -366,13 +374,13 @@ export const HeroCoinsImage = styled(Image)`
   height: 1rem;
 
   @media (max-width: 335px) {
-    width: .8rem;
-    height: .8rem;
+    width: 0.8rem;
+    height: 0.8rem;
   }
 
   @media (max-width: 260px) {
-    width: .6rem;
-    height: .6rem;
+    width: 0.6rem;
+    height: 0.6rem;
   }
 `;
 export const HeroCoinsIcon = styled.div`
@@ -466,7 +474,7 @@ export const ManImage = styled(Image)`
   }
 
   @media (max-width: 600px) {
-    display: none; 
+    display: none;
   }
 `;
 

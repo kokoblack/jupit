@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/jupit1.png";
+import logo from "../assets/jupit1.png";
 import {
   GrInstagram,
   GrLinkedinOption,
@@ -20,7 +20,7 @@ import {
   MoveRight,
   FooterContentHolder,
   HR,
-} from "../../components/StyledComponent";
+} from "../components/StyledComponent";
 
 const Footer = () => {
   return (

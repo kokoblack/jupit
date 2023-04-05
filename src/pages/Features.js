@@ -1,10 +1,10 @@
 import React from "react";
-import FeaturesCard from "../../components/FeaturesCard";
+import FeaturesCard from "../components/FeaturesCard";
 import { IoIosFlash } from "react-icons/io";
 import { GiTwoCoins, GiFallingStar } from "react-icons/gi";
 import { BsWallet2, BsCheckCircleFill } from "react-icons/bs";
-import phone from '../../assets/phone2.png'
-import star from '../../assets/star-img1.png'
+import phone from '../assets/phone2.png'
+import star from '../assets/star-img1.png'
 import {
   FeatContainer,
   Flex,
@@ -19,7 +19,7 @@ import {
   FlexBasis,
   FeatIconImage,
   FeatFlexibleWrapper,
-} from "../../components/StyledComponent";
+} from "../components/StyledComponent";
 
 const Features = () => {
   return (

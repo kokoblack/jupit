@@ -4,8 +4,8 @@ import {
   AboutContainer,
   AboutTextBig,
   AboutTextSmall
-} from "../../components/StyledComponent";
-import { AboutCard } from "../../components/AboutCard";
+} from "../components/StyledComponent";
+import { AboutCard } from "../components/AboutCard";
 
 const About = () => {
   return (
